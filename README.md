@@ -28,6 +28,7 @@ For model weights and audio samples, please refer to the [Irodori-TTS-v4.1-Small
 - **Multi-GPU Training**: Distributed training via `uv run --no-sync torchrun` with gradient accumulation, mixed precision (bf16), and W&B logging
 - **PEFT LoRA Fine-Tuning**: Parameter-efficient adaptation with PEFT/LoRA for released checkpoints
 - **Speaker Inversion**: Learn reusable speaker embedding tokens for a target voice while freezing the base model
+- **Custom Pronunciation Dictionaries**: Optional JSON user readings through CLI and Python API ([guide and examples](docs/pronunciation_dictionary.md))
 - **Flexible Inference**: CLI, Gradio Web UI, and HuggingFace Hub checkpoint support
 
 ## Architecture

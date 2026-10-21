@@ -24,6 +24,7 @@ from .duration import build_duration_features
 from .lora import checkpoint_state_uses_lora, is_lora_adapter_dir, load_lora_adapter
 from .meanflow import sample_euler_meanflow
 from .model import TextToLatentRFDiT
+from .pronunciation_dictionary import PreparedText, PronunciationDictionary, prepare_text
 from .quantization import (
     is_torchao_quantized_state_dict,
     parse_quantization_metadata,
@@ -34,7 +35,6 @@ from .speaker_inversion import (
     load_speaker_inversion_payload,
     speaker_inversion_batch_tensors,
 )
-from .text_normalization import normalize_text
 from .tokenizer import PretrainedTextTokenizer
 from .watermark import SilentCipherWatermarker
 
@@ -245,6 +245,7 @@ class SamplingRequest:
     tail_std_threshold: float = 0.05
     tail_mean_threshold: float = 0.1
     lora_adapter: str | None = None
+    pronunciation_dictionary: PronunciationDictionary | None = None
 
 
 @dataclass
@@ -256,6 +257,7 @@ class SamplingResult:
     total_to_decode: float
     used_seed: int
     messages: list[str]
+    text_processing: PreparedText | None = None
 
 
 def _maybe_compile_inference_model(
@@ -1084,7 +1086,8 @@ class InferenceRuntime:
             )
 
         raw_text = str(req.text)
-        normalized_text = normalize_text(raw_text).strip()
+        prepared_text = prepare_text(raw_text, req.pronunciation_dictionary)
+        normalized_text = prepared_text.spoken_text
         if normalized_text == "":
             raise ValueError("text became empty after normalization.")
 
@@ -1492,6 +1495,7 @@ class InferenceRuntime:
             total_to_decode=total_to_decode,
             used_seed=used_seed,
             messages=messages,
+            text_processing=prepared_text,
         )
 
     def unload(self) -> None:

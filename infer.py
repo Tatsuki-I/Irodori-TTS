@@ -14,6 +14,7 @@ from irodori_tts.inference_runtime import (
     resolve_cfg_scales,
     save_wav,
 )
+from irodori_tts.pronunciation_dictionary import PronunciationDictionary
 
 
 def _parse_optional_float(value: str) -> float | None:
@@ -83,6 +84,16 @@ def main() -> None:
         ),
     )
     parser.add_argument("--text", required=True)
+    parser.add_argument(
+        "--pronunciation-dictionary",
+        default=None,
+        help="Optional UTF-8 JSON user pronunciation dictionary (version 1).",
+    )
+    parser.add_argument(
+        "--show-text",
+        action="store_true",
+        help="Show original, normalised and spoken text after synthesis.",
+    )
     parser.add_argument(
         "--caption",
         default=None,
@@ -397,6 +408,15 @@ def main() -> None:
     )
     args = parser.parse_args()
 
+    pronunciation_dictionary = None
+    if args.pronunciation_dictionary is not None:
+        try:
+            pronunciation_dictionary = PronunciationDictionary.from_file(
+                args.pronunciation_dictionary
+            )
+        except (OSError, ValueError) as exc:
+            parser.error(f"Invalid pronunciation dictionary: {exc}")
+
     checkpoint_path = _resolve_checkpoint_path(args)
 
     runtime = InferenceRuntime.from_key(
@@ -421,9 +441,7 @@ def main() -> None:
         or args.ref_latents is not None
         or args.ref_embed is not None
     ):
-        parser.error(
-            "speaker-conditioned checkpoints require one reference option or --no-ref."
-        )
+        parser.error("speaker-conditioned checkpoints require one reference option or --no-ref.")
     use_speaker_for_request = bool(
         runtime.model_cfg.use_speaker_condition_resolved and not args.no_ref
     )
@@ -446,6 +464,7 @@ def main() -> None:
     result = runtime.synthesize(
         SamplingRequest(
             text=str(args.text),
+            pronunciation_dictionary=pronunciation_dictionary,
             caption=None if args.caption is None else str(args.caption),
             ref_wav=args.ref_wav,
             ref_wavs=args.ref_wavs,
@@ -500,6 +519,10 @@ def main() -> None:
         log_fn=None,
     )
 
+    if args.show_text and result.text_processing is not None:
+        print(f"[text] original: {result.text_processing.original_text!r}")
+        print(f"[text] normalised: {result.text_processing.normalized_text!r}")
+        print(f"[text] spoken: {result.text_processing.spoken_text!r}")
     print(f"[seed] used_seed: {result.used_seed}")
     if int(args.num_candidates) == 1:
         out_path = save_wav(args.output_wav, result.audio, result.sample_rate)
