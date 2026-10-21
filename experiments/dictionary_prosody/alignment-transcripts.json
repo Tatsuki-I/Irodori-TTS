@@ -1,0 +1,14 @@
+{
+  "schema": "expected-mora-transcripts-v1",
+  "note": "Expected kana/Latin units for this fixed experiment only. Not ASR ground truth or a general Japanese romaniser.",
+  "words": {
+    "ame": [{"label":"あ","latin":"a"},{"label":"め","latin":"me"}],
+    "hashi": [{"label":"は","latin":"ha"},{"label":"し","latin":"shi"}],
+    "kokoro": [{"label":"こ","latin":"ko"},{"label":"こ","latin":"ko"},{"label":"ろ","latin":"ro"}]
+  },
+  "prefixes": {
+    "0": [],
+    "1": [{"label":"こ","latin":"ko"},{"label":"こ","latin":"ko"},{"label":"に","latin":"ni"}]
+  },
+  "suffix": [{"label":"が","latin":"ga","role":"particle"},{"label":"あ","latin":"a","role":"suffix"},{"label":"る","latin":"ru","role":"suffix"}]
+}

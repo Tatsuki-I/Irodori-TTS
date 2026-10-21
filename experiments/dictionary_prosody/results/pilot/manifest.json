@@ -1,0 +1,488 @@
+{
+  "schema": "dictionary-prosody-run-v1",
+  "config": {
+    "schema": "dictionary-prosody-cases-v1",
+    "checkpoint_repo": "Aratako/Irodori-TTS-v4.1-Small",
+    "checkpoint_revision": "2b28324dc263ed5e6638b3cf3dd94c82ead07b4b",
+    "caption": "落ち着いた成人女性の声。自然な標準語で話す。",
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "contexts": [
+      "{surface}がある。",
+      "ここに{surface}がある。"
+    ],
+    "words": [
+      {
+        "id": "ame",
+        "surface": "雨",
+        "reading": "あめ",
+        "nuclei": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "hashi",
+        "surface": "橋",
+        "reading": "はし",
+        "nuclei": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "id": "kokoro",
+        "surface": "心",
+        "reading": "こころ",
+        "nuclei": [
+          0,
+          1,
+          2,
+          3
+        ]
+      }
+    ]
+  },
+  "source_commit": null,
+  "source_commit_redacted": true,
+  "source_commit_note": "Original pre-publication commit identifier withheld for privacy; this run was not regenerated after history cleanup.",
+  "source_dirty": true,
+  "python": "3.12.14",
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+  "packages": {
+    "torch": "2.10.0+cpu",
+    "torchaudio": "2.10.0+cpu",
+    "transformers": "5.12.1",
+    "numpy": "2.5.4",
+    "safetensors": "0.8.0",
+    "soundfile": "0.14.0"
+  },
+  "settings": {
+    "steps": 40,
+    "seconds": 2.0,
+    "threads": 4,
+    "model_precision": "fp32",
+    "cfg_text": 3.0,
+    "cfg_caption": 3.0,
+    "cfg_speaker": 5.0,
+    "reference": null
+  },
+  "status": "generated",
+  "rows": [
+    {
+      "original_text": "雨がある。",
+      "normalized_text": "雨がある。",
+      "spoken_text": "雨がある。",
+      "caption": "落ち着いた成人女性の声。自然な標準語で話す。",
+      "nucleus": null,
+      "method": "original",
+      "id": "ame-c0-s0-original-nna-r0",
+      "word": "ame",
+      "context": 0,
+      "seed": 0,
+      "repeat": 0,
+      "entry": {
+        "surface": "雨",
+        "reading": "あめ"
+      },
+      "replacement": null,
+      "status": "generated",
+      "token_ids": [
+        1,
+        2988,
+        956,
+        278
+      ],
+      "wav": "ame-c0-s0-original-nna-r0.wav",
+      "wav_sha256": "9dab7c41a47a4930d692f26d388f26abf96850cbf226467aace6dd4e18d15a61",
+      "sample_rate": 48000,
+      "audio_seconds": 2.0,
+      "elapsed_seconds": 19.166480639000383,
+      "messages": [
+        "info: speaker conditioning is disabled for this checkpoint or request; ignoring cfg_scale_speaker.",
+        "info: using manual duration 2.000s.",
+        "warning: SilentCipher watermark is unavailable; generated audio was not watermarked."
+      ]
+    },
+    {
+      "original_text": "雨がある。",
+      "normalized_text": "雨がある。",
+      "spoken_text": "あめがある。",
+      "caption": "落ち着いた成人女性の声。自然な標準語で話す。",
+      "nucleus": null,
+      "method": "reading",
+      "id": "ame-c0-s0-reading-nna-r0",
+      "word": "ame",
+      "context": 0,
+      "seed": 0,
+      "repeat": 0,
+      "entry": {
+        "surface": "雨",
+        "reading": "あめ"
+      },
+      "replacement": "あめ",
+      "status": "generated",
+      "token_ids": [
+        1,
+        50867,
+        956,
+        278
+      ],
+      "wav": "ame-c0-s0-reading-nna-r0.wav",
+      "wav_sha256": "79f09fe2c99eaa077d54b2c3bcee9acd4509ac8e5c0abd095c9e542800be6f6b",
+      "sample_rate": 48000,
+      "audio_seconds": 2.0,
+      "elapsed_seconds": 18.925651586000185,
+      "messages": [
+        "info: speaker conditioning is disabled for this checkpoint or request; ignoring cfg_scale_speaker.",
+        "info: using manual duration 2.000s.",
+        "warning: SilentCipher watermark is unavailable; generated audio was not watermarked."
+      ]
+    },
+    {
+      "original_text": "雨がある。",
+      "normalized_text": "雨がある。",
+      "spoken_text": "あめがある。",
+      "caption": "落ち着いた成人女性の声。自然な標準語で話す。",
+      "reading": "あめ",
+      "moras": [
+        "あ",
+        "め"
+      ],
+      "nucleus": 0,
+      "method": "downstep",
+      "experimental_only": true,
+      "validated_accent_control": false,
+      "id": "ame-c0-s0-downstep-n0-r0",
+      "word": "ame",
+      "context": 0,
+      "seed": 0,
+      "repeat": 0,
+      "entry": {
+        "surface": "雨",
+        "reading": "あめ",
+        "accent": {
+          "dialect": "tokyo",
+          "nucleus": 0
+        }
+      },
+      "replacement": "あめ",
+      "status": "generated",
+      "token_ids": [
+        1,
+        50867,
+        956,
+        278
+      ],
+      "wav": "ame-c0-s0-downstep-n0-r0.wav",
+      "wav_sha256": "18813675a6da6be8d40a7a649b6441358900422d5de31f3fd06bc138bfb37527",
+      "sample_rate": 48000,
+      "audio_seconds": 2.0,
+      "elapsed_seconds": 19.2521324610002,
+      "messages": [
+        "info: speaker conditioning is disabled for this checkpoint or request; ignoring cfg_scale_speaker.",
+        "info: using manual duration 2.000s.",
+        "warning: SilentCipher watermark is unavailable; generated audio was not watermarked."
+      ]
+    },
+    {
+      "original_text": "雨がある。",
+      "normalized_text": "雨がある。",
+      "spoken_text": "あꜜめがある。",
+      "caption": "落ち着いた成人女性の声。自然な標準語で話す。",
+      "reading": "あめ",
+      "moras": [
+        "あ",
+        "め"
+      ],
+      "nucleus": 1,
+      "method": "downstep",
+      "experimental_only": true,
+      "validated_accent_control": false,
+      "id": "ame-c0-s0-downstep-n1-r0",
+      "word": "ame",
+      "context": 0,
+      "seed": 0,
+      "repeat": 0,
+      "entry": {
+        "surface": "雨",
+        "reading": "あめ",
+        "accent": {
+          "dialect": "tokyo",
+          "nucleus": 1
+        }
+      },
+      "replacement": "あꜜめ",
+      "status": "generated",
+      "token_ids": [
+        1,
+        1516,
+        249,
+        171,
+        171,
+        2582,
+        956,
+        278
+      ],
+      "wav": "ame-c0-s0-downstep-n1-r0.wav",
+      "wav_sha256": "026ed6ea4ada50adc55ed28741b8e758e3452bcbe4666593b0cd10bc421b2187",
+      "sample_rate": 48000,
+      "audio_seconds": 2.0,
+      "elapsed_seconds": 18.359362952000083,
+      "messages": [
+        "info: speaker conditioning is disabled for this checkpoint or request; ignoring cfg_scale_speaker.",
+        "info: using manual duration 2.000s.",
+        "warning: SilentCipher watermark is unavailable; generated audio was not watermarked."
+      ]
+    },
+    {
+      "original_text": "雨がある。",
+      "normalized_text": "雨がある。",
+      "spoken_text": "あ↑めがある。",
+      "caption": "落ち着いた成人女性の声。自然な標準語で話す。",
+      "reading": "あめ",
+      "moras": [
+        "あ",
+        "め"
+      ],
+      "nucleus": 0,
+      "method": "arrows",
+      "experimental_only": true,
+      "validated_accent_control": false,
+      "id": "ame-c0-s0-arrows-n0-r0",
+      "word": "ame",
+      "context": 0,
+      "seed": 0,
+      "repeat": 0,
+      "entry": {
+        "surface": "雨",
+        "reading": "あめ",
+        "accent": {
+          "dialect": "tokyo",
+          "nucleus": 0
+        }
+      },
+      "replacement": "あ↑め",
+      "status": "generated",
+      "token_ids": [
+        1,
+        1516,
+        5389,
+        2582,
+        956,
+        278
+      ],
+      "wav": "ame-c0-s0-arrows-n0-r0.wav",
+      "wav_sha256": "7d139740380957f0a310ed3d60491631c965b6f06062e06ceaa49bceaee00174",
+      "sample_rate": 48000,
+      "audio_seconds": 2.0,
+      "elapsed_seconds": 17.720996732000003,
+      "messages": [
+        "info: speaker conditioning is disabled for this checkpoint or request; ignoring cfg_scale_speaker.",
+        "info: using manual duration 2.000s.",
+        "warning: SilentCipher watermark is unavailable; generated audio was not watermarked."
+      ]
+    },
+    {
+      "original_text": "雨がある。",
+      "normalized_text": "雨がある。",
+      "spoken_text": "あ↓めがある。",
+      "caption": "落ち着いた成人女性の声。自然な標準語で話す。",
+      "reading": "あめ",
+      "moras": [
+        "あ",
+        "め"
+      ],
+      "nucleus": 1,
+      "method": "arrows",
+      "experimental_only": true,
+      "validated_accent_control": false,
+      "id": "ame-c0-s0-arrows-n1-r0",
+      "word": "ame",
+      "context": 0,
+      "seed": 0,
+      "repeat": 0,
+      "entry": {
+        "surface": "雨",
+        "reading": "あめ",
+        "accent": {
+          "dialect": "tokyo",
+          "nucleus": 1
+        }
+      },
+      "replacement": "あ↓め",
+      "status": "generated",
+      "token_ids": [
+        1,
+        1516,
+        4553,
+        2582,
+        956,
+        278
+      ],
+      "wav": "ame-c0-s0-arrows-n1-r0.wav",
+      "wav_sha256": "3225eb021851a243640e7033efa82f923bc94fe9897090ff3f4c4494c7c54ed4",
+      "sample_rate": 48000,
+      "audio_seconds": 2.0,
+      "elapsed_seconds": 19.609755048999887,
+      "messages": [
+        "info: speaker conditioning is disabled for this checkpoint or request; ignoring cfg_scale_speaker.",
+        "info: using manual duration 2.000s.",
+        "warning: SilentCipher watermark is unavailable; generated audio was not watermarked."
+      ]
+    },
+    {
+      "original_text": "雨がある。",
+      "normalized_text": "雨がある。",
+      "spoken_text": "あめがある。",
+      "caption": "落ち着いた成人女性の声。自然な標準語で話す。 「あめ」の東京式アクセント核は0。平板型で、助詞まで高く続ける。",
+      "reading": "あめ",
+      "moras": [
+        "あ",
+        "め"
+      ],
+      "nucleus": 0,
+      "method": "caption",
+      "experimental_only": true,
+      "validated_accent_control": false,
+      "id": "ame-c0-s0-caption-n0-r0",
+      "word": "ame",
+      "context": 0,
+      "seed": 0,
+      "repeat": 0,
+      "entry": {
+        "surface": "雨",
+        "reading": "あめ",
+        "accent": {
+          "dialect": "tokyo",
+          "nucleus": 0
+        }
+      },
+      "replacement": "あめ",
+      "status": "generated",
+      "token_ids": [
+        1,
+        50867,
+        956,
+        278
+      ],
+      "wav": "ame-c0-s0-caption-n0-r0.wav",
+      "wav_sha256": "d4a1ff2d39e782e74c8663fa4d86473216a1bf039086eb1332fb400ece3cfa1c",
+      "sample_rate": 48000,
+      "audio_seconds": 2.0,
+      "elapsed_seconds": 18.97596789399995,
+      "messages": [
+        "info: speaker conditioning is disabled for this checkpoint or request; ignoring cfg_scale_speaker.",
+        "info: using manual duration 2.000s.",
+        "warning: SilentCipher watermark is unavailable; generated audio was not watermarked."
+      ]
+    },
+    {
+      "original_text": "雨がある。",
+      "normalized_text": "雨がある。",
+      "spoken_text": "あめがある。",
+      "caption": "落ち着いた成人女性の声。自然な標準語で話す。 「あめ」の東京式アクセント核は1。第1モーラの直後で音高を下げる。",
+      "reading": "あめ",
+      "moras": [
+        "あ",
+        "め"
+      ],
+      "nucleus": 1,
+      "method": "caption",
+      "experimental_only": true,
+      "validated_accent_control": false,
+      "id": "ame-c0-s0-caption-n1-r0",
+      "word": "ame",
+      "context": 0,
+      "seed": 0,
+      "repeat": 0,
+      "entry": {
+        "surface": "雨",
+        "reading": "あめ",
+        "accent": {
+          "dialect": "tokyo",
+          "nucleus": 1
+        }
+      },
+      "replacement": "あめ",
+      "status": "generated",
+      "token_ids": [
+        1,
+        50867,
+        956,
+        278
+      ],
+      "wav": "ame-c0-s0-caption-n1-r0.wav",
+      "wav_sha256": "eb663c65ea2231940dd02d1f89b39aaff2bc8af0d95f8ac190349659e6d76853",
+      "sample_rate": 48000,
+      "audio_seconds": 2.0,
+      "elapsed_seconds": 18.055939240000043,
+      "messages": [
+        "info: speaker conditioning is disabled for this checkpoint or request; ignoring cfg_scale_speaker.",
+        "info: using manual duration 2.000s.",
+        "warning: SilentCipher watermark is unavailable; generated audio was not watermarked."
+      ]
+    }
+  ],
+  "checkpoint_sha256": "c85de88c01700cb53538e706f128ebcb1b8513ad21d7d0e75f58bc82cdbf89f6",
+  "codec_sha256": "db120339c5ee7eca1912cdf29bc612b947a0808e69c3cebfb4936b45a762c1d5",
+  "tokenizer_sha256": {
+    "tokenizer.json": "6a0734cf21c802169defaffe719bc2ef12bb9d0be37e54b61ed27aa89394723d",
+    "tokenizer_config.json": "d229a271c64de1a7939d20d3665498e873fa91d5ee2edf135d73ec752cb9c9d3"
+  },
+  "model_config": {
+    "flow_parameterization": "rf_velocity",
+    "latent_dim": 32,
+    "latent_patch_size": 1,
+    "model_dim": 1280,
+    "num_layers": 12,
+    "num_heads": 20,
+    "mlp_ratio": 2.875,
+    "text_mlp_ratio": 2.6,
+    "speaker_mlp_ratio": 2.6,
+    "dropout": 0.0,
+    "text_vocab_size": 102400,
+    "text_tokenizer_repo": "sbintuitions/modernbert-ja-310m",
+    "text_encoder_revision": "77675fc96a7e445e982e2ba90246b816efc74ec6",
+    "text_add_bos": true,
+    "text_encoder_type": "pretrained",
+    "pretrained_projector_type": "residual_mlp",
+    "pretrained_projector_hidden_ratio": 2.0,
+    "pretrained_projector_dropout": 0.0,
+    "text_dim": 512,
+    "text_layers": 14,
+    "text_heads": 10,
+    "use_caption_condition": true,
+    "use_speaker_condition": true,
+    "caption_vocab_size": 102400,
+    "caption_tokenizer_repo": "sbintuitions/modernbert-ja-310m",
+    "caption_add_bos": true,
+    "caption_dim": 512,
+    "caption_layers": null,
+    "caption_heads": null,
+    "caption_mlp_ratio": null,
+    "speaker_dim": 768,
+    "speaker_layers": 8,
+    "speaker_heads": 12,
+    "speaker_patch_size": 4,
+    "timestep_embed_dim": 512,
+    "adaln_rank": 192,
+    "norm_eps": 1e-05,
+    "use_duration_predictor": true,
+    "duration_aux_dim": 14,
+    "duration_hidden_dim": 1024,
+    "duration_layers": 3,
+    "duration_dropout": 0.1,
+    "duration_attention_heads": 8,
+    "duration_architecture": "token_sum_dual_adarn_zero_no_aux",
+    "duration_token_init_frames": 9.0,
+    "duration_speaker_fusion": "adarn_zero",
+    "duration_caption_fusion": "adarn_zero",
+    "duration_caption_pooling": "masked_mean"
+  },
+  "watermark_enabled": false
+}

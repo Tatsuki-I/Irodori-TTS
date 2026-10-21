@@ -1,0 +1,6 @@
+# Opt-in research tools only; do not add to Irodori's runtime dependencies.
+pyworld==0.3.5
+numpy>=1.26
+matplotlib>=3.8
+# PyWORLD 0.3.5 imports pkg_resources, removed from setuptools 81.
+setuptools<81

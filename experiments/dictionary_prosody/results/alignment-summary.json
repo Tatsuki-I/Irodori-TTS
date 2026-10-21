@@ -1,0 +1,41 @@
+{
+  "scope": "Unreviewed CTC-based F0-shape screen, not accent accuracy",
+  "total_clips": 40,
+  "nucleus_requested_clips": 30,
+  "shape_matches": 2,
+  "shape_nonmatches": 12,
+  "not_assessed": 16,
+  "repeated_alignment_rows_identical": true,
+  "accent_verified": false,
+  "manual_mora_alignment_performed": false,
+  "human_listening_performed": false,
+  "candidates": [
+    {
+      "id": "hashi-c0-s1-downstep-n2-r0",
+      "expected_latin": "hashigaaru",
+      "greedy_latin": "hashiagaaru",
+      "exact_greedy_transcript_match": false,
+      "greedy_character_error_rate": 0.1,
+      "drops_semitones": [
+        -4.737266644871024,
+        4.061055947197749
+      ]
+    },
+    {
+      "id": "ame-c0-s0-arrows-n0-r0",
+      "expected_latin": "amegaaru",
+      "greedy_latin": "anegaaru",
+      "exact_greedy_transcript_match": false,
+      "greedy_character_error_rate": 0.125,
+      "drops_semitones": [
+        -6.1956959206848445,
+        2.183312569114791
+      ]
+    }
+  ],
+  "warnings": {
+    "greedy transcript disagreement exceeds exploratory threshold": 18,
+    "heuristic changes under +/-10 ms boundary shift": 2,
+    "low target/particle alignment posterior": 3
+  }
+}

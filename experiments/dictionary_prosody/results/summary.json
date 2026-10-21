@@ -1,0 +1,131 @@
+{
+  "runs": [
+    {
+      "name": "boundaries",
+      "status": "generated",
+      "generated": 8,
+      "planned_total": 8,
+      "words": [
+        "ame"
+      ],
+      "contexts": [
+        1
+      ],
+      "seeds": [
+        0
+      ],
+      "methods": [
+        "comma",
+        "katakana",
+        "original",
+        "reading",
+        "space"
+      ],
+      "generation_seconds": 143.9760344790002
+    },
+    {
+      "name": "generalisation",
+      "status": "generated",
+      "generated": 24,
+      "planned_total": 24,
+      "words": [
+        "ame",
+        "hashi",
+        "kokoro"
+      ],
+      "contexts": [
+        0
+      ],
+      "seeds": [
+        1
+      ],
+      "methods": [
+        "caption",
+        "downstep",
+        "original",
+        "reading"
+      ],
+      "generation_seconds": 462.71201821400064
+    },
+    {
+      "name": "pilot",
+      "status": "generated",
+      "generated": 8,
+      "planned_total": 8,
+      "words": [
+        "ame"
+      ],
+      "contexts": [
+        0
+      ],
+      "seeds": [
+        0
+      ],
+      "methods": [
+        "arrows",
+        "caption",
+        "downstep",
+        "original",
+        "reading"
+      ],
+      "generation_seconds": 150.06628655300074
+    }
+  ],
+  "natural_tts_wavs": 40,
+  "exact_input_control_groups": [
+    {
+      "run": "boundaries",
+      "ids": [
+        "ame-c1-s0-reading-nna-r0",
+        "ame-c1-s0-space-n0-r0",
+        "ame-c1-s0-comma-n0-r0"
+      ],
+      "pcm_identical": true
+    },
+    {
+      "run": "boundaries",
+      "ids": [
+        "ame-c1-s0-katakana-n0-r0",
+        "ame-c1-s0-katakana-n1-r0"
+      ],
+      "pcm_identical": true
+    },
+    {
+      "run": "generalisation",
+      "ids": [
+        "ame-c0-s1-reading-nna-r0",
+        "ame-c0-s1-downstep-n0-r0"
+      ],
+      "pcm_identical": true
+    },
+    {
+      "run": "generalisation",
+      "ids": [
+        "hashi-c0-s1-reading-nna-r0",
+        "hashi-c0-s1-downstep-n0-r0"
+      ],
+      "pcm_identical": true
+    },
+    {
+      "run": "generalisation",
+      "ids": [
+        "kokoro-c0-s1-reading-nna-r0",
+        "kokoro-c0-s1-downstep-n0-r0"
+      ],
+      "pcm_identical": true
+    },
+    {
+      "run": "pilot",
+      "ids": [
+        "ame-c0-s0-reading-nna-r0",
+        "ame-c0-s0-downstep-n0-r0"
+      ],
+      "pcm_identical": true
+    }
+  ],
+  "all_exact_controls_identical": true,
+  "lexical_accent_verified": false,
+  "manual_mora_alignment_performed": false,
+  "auditory_review_performed": false,
+  "scope": "Exploratory acoustic changes only; no verified local accent accuracy or naturalness score"
+}

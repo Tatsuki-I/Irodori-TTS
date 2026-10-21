@@ -1,0 +1,3826 @@
+{
+  "schema": "dictionary-prosody-robustness-v1",
+  "packages": {
+    "numpy": "2.3.5",
+    "soundfile": "0.14.0"
+  },
+  "source_sha256": {
+    "automatic-alignment.json": "4b867aa1b2e4f702a28be30207255a7d7c1cd8230231e412ffb1f38da308d7ea",
+    "boundaries/manifest.json": "e5e523cc79a86ae42337b235233fb65faa5d0e63d4600211c086224992165843",
+    "boundaries/analysis.json": "49338b4a1262b70725aa018aee83740eaf7e4bdc58fc022993473c1b3314b743",
+    "boundaries/ame-c1-s0-original-nna-r0-f0.csv": "a3002fc8d1e79b894e805db6530715e89ecf5bd14b1f47b365d75c7d025b9a50",
+    "boundaries/ame-c1-s0-reading-nna-r0-f0.csv": "065b62a1d62f405b691f6f158f6f74aa769fff2e1588587d248aa7dba6dc2a05",
+    "boundaries/ame-c1-s0-katakana-n0-r0-f0.csv": "0aa3d948a382691eeb3322332aaa502538fab5d410f94ed1968a2aeaa6d62022",
+    "boundaries/ame-c1-s0-katakana-n1-r0-f0.csv": "0aa3d948a382691eeb3322332aaa502538fab5d410f94ed1968a2aeaa6d62022",
+    "boundaries/ame-c1-s0-space-n0-r0-f0.csv": "065b62a1d62f405b691f6f158f6f74aa769fff2e1588587d248aa7dba6dc2a05",
+    "boundaries/ame-c1-s0-space-n1-r0-f0.csv": "2f53ceb041d3d0e5a0f4d35247a9d0227ca903d6e890d6ea0f8ca4cbf0095853",
+    "boundaries/ame-c1-s0-comma-n0-r0-f0.csv": "065b62a1d62f405b691f6f158f6f74aa769fff2e1588587d248aa7dba6dc2a05",
+    "boundaries/ame-c1-s0-comma-n1-r0-f0.csv": "a9ff84fdd26c87960e47ed3cfb6df627972eca03d2ef7c8ad1d7f16adca38621",
+    "generalisation/manifest.json": "0701139456c95ebd0a076df2a9a19d0c351dc7dc54b9a4bf38f6a7efaa716b94",
+    "generalisation/analysis.json": "c657ba7f3b0733198a2b40ea9b01fe5d8f4f325339d0fef10f1b126ea2b3c880",
+    "generalisation/ame-c0-s1-original-nna-r0-f0.csv": "78b283caa59c3b01f842dcd7c091221f9a5fb75c9a77e34c14e2ddb1edb7b451",
+    "generalisation/ame-c0-s1-reading-nna-r0-f0.csv": "815e80d67f1bcaed7ade320ac1243b665ba652608549823277db85937540cfea",
+    "generalisation/ame-c0-s1-downstep-n0-r0-f0.csv": "815e80d67f1bcaed7ade320ac1243b665ba652608549823277db85937540cfea",
+    "generalisation/ame-c0-s1-downstep-n1-r0-f0.csv": "be3ff1ca0bdbadafbb1c903a70ed935738d1bf18a585cb88b7324b37eccda32b",
+    "generalisation/ame-c0-s1-caption-n0-r0-f0.csv": "e5be7715552284765f010365ccac449d354c77ac17d597aaf23de7bc12811086",
+    "generalisation/ame-c0-s1-caption-n1-r0-f0.csv": "c46bb62539dd40880ee6521c2aec786a5b82a38cf539c8958373f624c2c25ee8",
+    "generalisation/hashi-c0-s1-original-nna-r0-f0.csv": "f51f21834a3a72cb947d68ec9798c0c8888b5a051ba8a1871b005ef22fa9ec19",
+    "generalisation/hashi-c0-s1-reading-nna-r0-f0.csv": "affe866bc07b540a9f2c8d131f841a55e8e88bdb08f51f12e4178a9d28732f72",
+    "generalisation/hashi-c0-s1-downstep-n0-r0-f0.csv": "affe866bc07b540a9f2c8d131f841a55e8e88bdb08f51f12e4178a9d28732f72",
+    "generalisation/hashi-c0-s1-downstep-n1-r0-f0.csv": "0657aee47b49c6e959b0dfa4abac48e373e8a69b64a51dd104b08508a4609875",
+    "generalisation/hashi-c0-s1-downstep-n2-r0-f0.csv": "1d23b13cc5b995e1fb4d66c4411ebc35c182f71d222f88fe48881d08202c12e0",
+    "generalisation/hashi-c0-s1-caption-n0-r0-f0.csv": "d27a061b3e5cafc3e619616040cbb7f95b750c07338cbbf0f30822177e4b0422",
+    "generalisation/hashi-c0-s1-caption-n1-r0-f0.csv": "dd8e46d3c5ae931f557bdb3b2c75abc73c9be6e5fde2edd9099f0804de53dff5",
+    "generalisation/hashi-c0-s1-caption-n2-r0-f0.csv": "e3ac0975bbb7ff398891344b97f980166686e3d2b3d497a574a98de98c962cfe",
+    "generalisation/kokoro-c0-s1-original-nna-r0-f0.csv": "bac311ec58d132b66f68566be7b7b41039295547f555772cbc086a0e196b9772",
+    "generalisation/kokoro-c0-s1-reading-nna-r0-f0.csv": "130631f16370e42a915e02d5c4c062bd40aed39ce17f5857a46976af0e435961",
+    "generalisation/kokoro-c0-s1-downstep-n0-r0-f0.csv": "130631f16370e42a915e02d5c4c062bd40aed39ce17f5857a46976af0e435961",
+    "generalisation/kokoro-c0-s1-downstep-n1-r0-f0.csv": "59902659b9a6e6482ec30d89b96cb049600e8fee15305262b002bd3a2d5e8eee",
+    "generalisation/kokoro-c0-s1-downstep-n2-r0-f0.csv": "434e3d978d9ca4e5d6ad7e364ff4a1fb3b48cb803880c8cc306f54b8cbaf530a",
+    "generalisation/kokoro-c0-s1-downstep-n3-r0-f0.csv": "b52f296c4d9107397207bf87796202202c4dca18b6e64d99335007ff2f26f3e2",
+    "generalisation/kokoro-c0-s1-caption-n0-r0-f0.csv": "404700eab3ef2c179be64755fd985a67886c79aadaccd9464a76f5adf66085c8",
+    "generalisation/kokoro-c0-s1-caption-n1-r0-f0.csv": "b6c3d11d7488a4d9e33728d715adaea1813e2222c7994516214a3c1fbc143487",
+    "generalisation/kokoro-c0-s1-caption-n2-r0-f0.csv": "aa20802eb40f92ffa8d46851e51b845e574592a67e0b1f220d52bd87c7232774",
+    "generalisation/kokoro-c0-s1-caption-n3-r0-f0.csv": "9f98b71d0a595ced10c29355b8369115fa070a1b1d3747ba68d12d616d3d0a77",
+    "pilot/manifest.json": "b47271f9d727fceddf89f86e1679ce3b462bf3d7c6caf8074711ba1215c76cbf",
+    "pilot/analysis.json": "5a665212765ac6e39cdee76526a4e37c845f2057c37166eb902bb92e544df7f9",
+    "pilot/ame-c0-s0-original-nna-r0-f0.csv": "e8d370e01c6884ae8bc8bd8a49cb44b78a52b4bd074fe901a4013e3598896d98",
+    "pilot/ame-c0-s0-reading-nna-r0-f0.csv": "472ff85bc45b3d9cbdddfdfed2521445168ba9d69fb62ab66bc71a8e457d8494",
+    "pilot/ame-c0-s0-downstep-n0-r0-f0.csv": "472ff85bc45b3d9cbdddfdfed2521445168ba9d69fb62ab66bc71a8e457d8494",
+    "pilot/ame-c0-s0-downstep-n1-r0-f0.csv": "e27cde637970d0b4b4a49f74568345034521bd6192bc6100992545821b84fb6b",
+    "pilot/ame-c0-s0-arrows-n0-r0-f0.csv": "c89a66c30006dccbdda20a105f2a9801ef32f0d6da843940f7f78ced3f4862b2",
+    "pilot/ame-c0-s0-arrows-n1-r0-f0.csv": "5cda37540e8f058f6f22ed6177333461de565fb3f4f0b272738ce413aad1b632",
+    "pilot/ame-c0-s0-caption-n0-r0-f0.csv": "ed38b09796c8beb6643a8dea8d51439787c36d89212b5c8b07ce067996d6cb33",
+    "pilot/ame-c0-s0-caption-n1-r0-f0.csv": "273c0cf1d17ea80b45553208f20c3c088a1c40add471328e1396d413832948c9"
+  },
+  "scope": "Post-hoc sensitivity and matched negative controls; not accent accuracy or statistical inference",
+  "accent_verified": false,
+  "human_listening_performed": false,
+  "exact_condition_groups": [
+    {
+      "run": "boundaries",
+      "ids": [
+        "ame-c1-s0-reading-nna-r0",
+        "ame-c1-s0-space-n0-r0",
+        "ame-c1-s0-comma-n0-r0"
+      ],
+      "pcm_identical": true
+    },
+    {
+      "run": "boundaries",
+      "ids": [
+        "ame-c1-s0-katakana-n0-r0",
+        "ame-c1-s0-katakana-n1-r0"
+      ],
+      "pcm_identical": true
+    },
+    {
+      "run": "generalisation",
+      "ids": [
+        "ame-c0-s1-reading-nna-r0",
+        "ame-c0-s1-downstep-n0-r0"
+      ],
+      "pcm_identical": true
+    },
+    {
+      "run": "generalisation",
+      "ids": [
+        "hashi-c0-s1-reading-nna-r0",
+        "hashi-c0-s1-downstep-n0-r0"
+      ],
+      "pcm_identical": true
+    },
+    {
+      "run": "generalisation",
+      "ids": [
+        "kokoro-c0-s1-reading-nna-r0",
+        "kokoro-c0-s1-downstep-n0-r0"
+      ],
+      "pcm_identical": true
+    },
+    {
+      "run": "pilot",
+      "ids": [
+        "ame-c0-s0-reading-nna-r0",
+        "ame-c0-s0-downstep-n0-r0"
+      ],
+      "pcm_identical": true
+    }
+  ],
+  "rows": [
+    {
+      "run": "boundaries",
+      "id": "ame-c1-s0-original-nna-r0",
+      "word": "ame",
+      "method": "original",
+      "nucleus": null,
+      "exact_greedy_transcript": false,
+      "default_matching_nuclei_raw": [
+        2
+      ],
+      "raw_assessable": true,
+      "original_gated_screen": null,
+      "threshold_grid": [
+        {
+          "transition": 1.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        }
+      ],
+      "boundary_sensitivity": [],
+      "accent_verified": false
+    },
+    {
+      "run": "boundaries",
+      "id": "ame-c1-s0-reading-nna-r0",
+      "word": "ame",
+      "method": "reading",
+      "nucleus": null,
+      "exact_greedy_transcript": false,
+      "default_matching_nuclei_raw": [],
+      "raw_assessable": true,
+      "original_gated_screen": null,
+      "threshold_grid": [
+        {
+          "transition": 1.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": []
+        }
+      ],
+      "boundary_sensitivity": [],
+      "accent_verified": false
+    },
+    {
+      "run": "boundaries",
+      "id": "ame-c1-s0-katakana-n0-r0",
+      "word": "ame",
+      "method": "katakana",
+      "nucleus": 0,
+      "exact_greedy_transcript": false,
+      "default_matching_nuclei_raw": [],
+      "raw_assessable": true,
+      "original_gated_screen": false,
+      "threshold_grid": [
+        {
+          "transition": 1.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": []
+        }
+      ],
+      "boundary_sensitivity": [
+        {
+          "radius_seconds": 0.02,
+          "valid_grid_counts": {
+            "False": 81
+          }
+        },
+        {
+          "radius_seconds": 0.04,
+          "valid_grid_counts": {
+            "False": 81
+          }
+        },
+        {
+          "radius_seconds": 0.08,
+          "valid_grid_counts": {
+            "False": 72,
+            "True": 9
+          }
+        }
+      ],
+      "accent_verified": false
+    },
+    {
+      "run": "boundaries",
+      "id": "ame-c1-s0-katakana-n1-r0",
+      "word": "ame",
+      "method": "katakana",
+      "nucleus": 1,
+      "exact_greedy_transcript": false,
+      "default_matching_nuclei_raw": [],
+      "raw_assessable": true,
+      "original_gated_screen": false,
+      "threshold_grid": [
+        {
+          "transition": 1.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": []
+        }
+      ],
+      "boundary_sensitivity": [
+        {
+          "radius_seconds": 0.02,
+          "valid_grid_counts": {
+            "False": 81
+          }
+        },
+        {
+          "radius_seconds": 0.04,
+          "valid_grid_counts": {
+            "False": 81
+          }
+        },
+        {
+          "radius_seconds": 0.08,
+          "valid_grid_counts": {
+            "False": 81
+          }
+        }
+      ],
+      "accent_verified": false
+    },
+    {
+      "run": "boundaries",
+      "id": "ame-c1-s0-space-n0-r0",
+      "word": "ame",
+      "method": "space",
+      "nucleus": 0,
+      "exact_greedy_transcript": false,
+      "default_matching_nuclei_raw": [],
+      "raw_assessable": true,
+      "original_gated_screen": null,
+      "threshold_grid": [
+        {
+          "transition": 1.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": []
+        }
+      ],
+      "boundary_sensitivity": [
+        {
+          "radius_seconds": 0.02,
+          "valid_grid_counts": {
+            "False": 81
+          }
+        },
+        {
+          "radius_seconds": 0.04,
+          "valid_grid_counts": {
+            "False": 81
+          }
+        },
+        {
+          "radius_seconds": 0.08,
+          "valid_grid_counts": {
+            "False": 63,
+            "None": 9,
+            "True": 9
+          }
+        }
+      ],
+      "accent_verified": false
+    },
+    {
+      "run": "boundaries",
+      "id": "ame-c1-s0-space-n1-r0",
+      "word": "ame",
+      "method": "space",
+      "nucleus": 1,
+      "exact_greedy_transcript": false,
+      "default_matching_nuclei_raw": [],
+      "raw_assessable": true,
+      "original_gated_screen": null,
+      "threshold_grid": [
+        {
+          "transition": 1.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": []
+        }
+      ],
+      "boundary_sensitivity": [
+        {
+          "radius_seconds": 0.02,
+          "valid_grid_counts": {
+            "True": 12,
+            "False": 69
+          }
+        },
+        {
+          "radius_seconds": 0.04,
+          "valid_grid_counts": {
+            "True": 26,
+            "False": 55
+          }
+        },
+        {
+          "radius_seconds": 0.08,
+          "valid_grid_counts": {
+            "False": 59,
+            "True": 13,
+            "None": 9
+          }
+        }
+      ],
+      "accent_verified": false
+    },
+    {
+      "run": "boundaries",
+      "id": "ame-c1-s0-comma-n0-r0",
+      "word": "ame",
+      "method": "comma",
+      "nucleus": 0,
+      "exact_greedy_transcript": false,
+      "default_matching_nuclei_raw": [],
+      "raw_assessable": true,
+      "original_gated_screen": null,
+      "threshold_grid": [
+        {
+          "transition": 1.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": []
+        }
+      ],
+      "boundary_sensitivity": [
+        {
+          "radius_seconds": 0.02,
+          "valid_grid_counts": {
+            "False": 81
+          }
+        },
+        {
+          "radius_seconds": 0.04,
+          "valid_grid_counts": {
+            "False": 81
+          }
+        },
+        {
+          "radius_seconds": 0.08,
+          "valid_grid_counts": {
+            "False": 63,
+            "None": 9,
+            "True": 9
+          }
+        }
+      ],
+      "accent_verified": false
+    },
+    {
+      "run": "boundaries",
+      "id": "ame-c1-s0-comma-n1-r0",
+      "word": "ame",
+      "method": "comma",
+      "nucleus": 1,
+      "exact_greedy_transcript": false,
+      "default_matching_nuclei_raw": [],
+      "raw_assessable": true,
+      "original_gated_screen": false,
+      "threshold_grid": [
+        {
+          "transition": 1.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": []
+        }
+      ],
+      "boundary_sensitivity": [
+        {
+          "radius_seconds": 0.02,
+          "valid_grid_counts": {
+            "False": 81
+          }
+        },
+        {
+          "radius_seconds": 0.04,
+          "valid_grid_counts": {
+            "False": 72,
+            "True": 9
+          }
+        },
+        {
+          "radius_seconds": 0.08,
+          "valid_grid_counts": {
+            "False": 71,
+            "True": 10
+          }
+        }
+      ],
+      "accent_verified": false
+    },
+    {
+      "run": "generalisation",
+      "id": "ame-c0-s1-original-nna-r0",
+      "word": "ame",
+      "method": "original",
+      "nucleus": null,
+      "exact_greedy_transcript": false,
+      "default_matching_nuclei_raw": [
+        2
+      ],
+      "raw_assessable": true,
+      "original_gated_screen": null,
+      "threshold_grid": [
+        {
+          "transition": 1.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        }
+      ],
+      "boundary_sensitivity": [],
+      "accent_verified": false
+    },
+    {
+      "run": "generalisation",
+      "id": "ame-c0-s1-reading-nna-r0",
+      "word": "ame",
+      "method": "reading",
+      "nucleus": null,
+      "exact_greedy_transcript": true,
+      "default_matching_nuclei_raw": [
+        2
+      ],
+      "raw_assessable": true,
+      "original_gated_screen": null,
+      "threshold_grid": [
+        {
+          "transition": 1.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        }
+      ],
+      "boundary_sensitivity": [],
+      "accent_verified": false
+    },
+    {
+      "run": "generalisation",
+      "id": "ame-c0-s1-downstep-n0-r0",
+      "word": "ame",
+      "method": "downstep",
+      "nucleus": 0,
+      "exact_greedy_transcript": true,
+      "default_matching_nuclei_raw": [
+        2
+      ],
+      "raw_assessable": true,
+      "original_gated_screen": false,
+      "threshold_grid": [
+        {
+          "transition": 1.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        }
+      ],
+      "boundary_sensitivity": [
+        {
+          "radius_seconds": 0.02,
+          "valid_grid_counts": {
+            "False": 81
+          }
+        },
+        {
+          "radius_seconds": 0.04,
+          "valid_grid_counts": {
+            "False": 72
+          }
+        },
+        {
+          "radius_seconds": 0.08,
+          "valid_grid_counts": {
+            "False": 54
+          }
+        }
+      ],
+      "accent_verified": false
+    },
+    {
+      "run": "generalisation",
+      "id": "ame-c0-s1-downstep-n1-r0",
+      "word": "ame",
+      "method": "downstep",
+      "nucleus": 1,
+      "exact_greedy_transcript": true,
+      "default_matching_nuclei_raw": [],
+      "raw_assessable": true,
+      "original_gated_screen": false,
+      "threshold_grid": [
+        {
+          "transition": 1.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": []
+        }
+      ],
+      "boundary_sensitivity": [
+        {
+          "radius_seconds": 0.02,
+          "valid_grid_counts": {
+            "False": 81
+          }
+        },
+        {
+          "radius_seconds": 0.04,
+          "valid_grid_counts": {
+            "False": 81
+          }
+        },
+        {
+          "radius_seconds": 0.08,
+          "valid_grid_counts": {
+            "False": 81
+          }
+        }
+      ],
+      "accent_verified": false
+    },
+    {
+      "run": "generalisation",
+      "id": "ame-c0-s1-caption-n0-r0",
+      "word": "ame",
+      "method": "caption",
+      "nucleus": 0,
+      "exact_greedy_transcript": false,
+      "default_matching_nuclei_raw": [
+        0
+      ],
+      "raw_assessable": true,
+      "original_gated_screen": null,
+      "threshold_grid": [
+        {
+          "transition": 1.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": [
+            0
+          ]
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": [
+            0
+          ]
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": [
+            0
+          ]
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": [
+            0
+          ]
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": [
+            0
+          ]
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": [
+            0
+          ]
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": [
+            0
+          ]
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": [
+            0
+          ]
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": [
+            0
+          ]
+        }
+      ],
+      "boundary_sensitivity": [
+        {
+          "radius_seconds": 0.02,
+          "valid_grid_counts": {
+            "True": 81
+          }
+        },
+        {
+          "radius_seconds": 0.04,
+          "valid_grid_counts": {
+            "False": 6,
+            "True": 66
+          }
+        },
+        {
+          "radius_seconds": 0.08,
+          "valid_grid_counts": {
+            "False": 12,
+            "True": 42
+          }
+        }
+      ],
+      "accent_verified": false
+    },
+    {
+      "run": "generalisation",
+      "id": "ame-c0-s1-caption-n1-r0",
+      "word": "ame",
+      "method": "caption",
+      "nucleus": 1,
+      "exact_greedy_transcript": true,
+      "default_matching_nuclei_raw": [
+        0
+      ],
+      "raw_assessable": true,
+      "original_gated_screen": false,
+      "threshold_grid": [
+        {
+          "transition": 1.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": [
+            0
+          ]
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": [
+            0
+          ]
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": [
+            0
+          ]
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": [
+            0
+          ]
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": [
+            0
+          ]
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": [
+            0
+          ]
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": [
+            0
+          ]
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": [
+            0
+          ]
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": [
+            0
+          ]
+        }
+      ],
+      "boundary_sensitivity": [
+        {
+          "radius_seconds": 0.02,
+          "valid_grid_counts": {
+            "False": 81
+          }
+        },
+        {
+          "radius_seconds": 0.04,
+          "valid_grid_counts": {
+            "False": 72,
+            "None": 9
+          }
+        },
+        {
+          "radius_seconds": 0.08,
+          "valid_grid_counts": {
+            "False": 54,
+            "None": 18
+          }
+        }
+      ],
+      "accent_verified": false
+    },
+    {
+      "run": "generalisation",
+      "id": "hashi-c0-s1-original-nna-r0",
+      "word": "hashi",
+      "method": "original",
+      "nucleus": null,
+      "exact_greedy_transcript": false,
+      "default_matching_nuclei_raw": [
+        0,
+        2
+      ],
+      "raw_assessable": true,
+      "original_gated_screen": null,
+      "threshold_grid": [
+        {
+          "transition": 1.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": [
+            0,
+            2
+          ]
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": [
+            0,
+            2
+          ]
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": [
+            0,
+            2
+          ]
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": [
+            0,
+            2
+          ]
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": [
+            0,
+            2
+          ]
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": [
+            0,
+            2
+          ]
+        }
+      ],
+      "boundary_sensitivity": [],
+      "accent_verified": false
+    },
+    {
+      "run": "generalisation",
+      "id": "hashi-c0-s1-reading-nna-r0",
+      "word": "hashi",
+      "method": "reading",
+      "nucleus": null,
+      "exact_greedy_transcript": false,
+      "default_matching_nuclei_raw": [],
+      "raw_assessable": true,
+      "original_gated_screen": null,
+      "threshold_grid": [
+        {
+          "transition": 1.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": [
+            1
+          ]
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": [
+            1
+          ]
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": [
+            1
+          ]
+        }
+      ],
+      "boundary_sensitivity": [],
+      "accent_verified": false
+    },
+    {
+      "run": "generalisation",
+      "id": "hashi-c0-s1-downstep-n0-r0",
+      "word": "hashi",
+      "method": "downstep",
+      "nucleus": 0,
+      "exact_greedy_transcript": false,
+      "default_matching_nuclei_raw": [],
+      "raw_assessable": true,
+      "original_gated_screen": false,
+      "threshold_grid": [
+        {
+          "transition": 1.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": [
+            1
+          ]
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": [
+            1
+          ]
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": [
+            1
+          ]
+        }
+      ],
+      "boundary_sensitivity": [
+        {
+          "radius_seconds": 0.02,
+          "valid_grid_counts": {
+            "False": 81
+          }
+        },
+        {
+          "radius_seconds": 0.04,
+          "valid_grid_counts": {
+            "False": 81
+          }
+        },
+        {
+          "radius_seconds": 0.08,
+          "valid_grid_counts": {
+            "False": 72
+          }
+        }
+      ],
+      "accent_verified": false
+    },
+    {
+      "run": "generalisation",
+      "id": "hashi-c0-s1-downstep-n1-r0",
+      "word": "hashi",
+      "method": "downstep",
+      "nucleus": 1,
+      "exact_greedy_transcript": false,
+      "default_matching_nuclei_raw": [],
+      "raw_assessable": true,
+      "original_gated_screen": null,
+      "threshold_grid": [
+        {
+          "transition": 1.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": [
+            1
+          ]
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": [
+            1
+          ]
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": [
+            1
+          ]
+        }
+      ],
+      "boundary_sensitivity": [
+        {
+          "radius_seconds": 0.02,
+          "valid_grid_counts": {
+            "False": 54,
+            "True": 27
+          }
+        },
+        {
+          "radius_seconds": 0.04,
+          "valid_grid_counts": {
+            "False": 45,
+            "True": 36
+          }
+        },
+        {
+          "radius_seconds": 0.08,
+          "valid_grid_counts": {
+            "False": 35,
+            "True": 28,
+            "None": 9
+          }
+        }
+      ],
+      "accent_verified": false
+    },
+    {
+      "run": "generalisation",
+      "id": "hashi-c0-s1-downstep-n2-r0",
+      "word": "hashi",
+      "method": "downstep",
+      "nucleus": 2,
+      "exact_greedy_transcript": false,
+      "default_matching_nuclei_raw": [
+        2
+      ],
+      "raw_assessable": true,
+      "original_gated_screen": true,
+      "threshold_grid": [
+        {
+          "transition": 1.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        }
+      ],
+      "boundary_sensitivity": [
+        {
+          "radius_seconds": 0.02,
+          "valid_grid_counts": {
+            "True": 81
+          }
+        },
+        {
+          "radius_seconds": 0.04,
+          "valid_grid_counts": {
+            "True": 81
+          }
+        },
+        {
+          "radius_seconds": 0.08,
+          "valid_grid_counts": {
+            "True": 72,
+            "None": 9
+          }
+        }
+      ],
+      "accent_verified": false
+    },
+    {
+      "run": "generalisation",
+      "id": "hashi-c0-s1-caption-n0-r0",
+      "word": "hashi",
+      "method": "caption",
+      "nucleus": 0,
+      "exact_greedy_transcript": false,
+      "default_matching_nuclei_raw": [],
+      "raw_assessable": true,
+      "original_gated_screen": null,
+      "threshold_grid": [
+        {
+          "transition": 1.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": [
+            0
+          ]
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": [
+            0
+          ]
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": [
+            0
+          ]
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": []
+        }
+      ],
+      "boundary_sensitivity": [
+        {
+          "radius_seconds": 0.02,
+          "valid_grid_counts": {
+            "False": 60,
+            "True": 21
+          }
+        },
+        {
+          "radius_seconds": 0.04,
+          "valid_grid_counts": {
+            "False": 54,
+            "True": 27
+          }
+        },
+        {
+          "radius_seconds": 0.08,
+          "valid_grid_counts": {
+            "False": 27,
+            "True": 27
+          }
+        }
+      ],
+      "accent_verified": false
+    },
+    {
+      "run": "generalisation",
+      "id": "hashi-c0-s1-caption-n1-r0",
+      "word": "hashi",
+      "method": "caption",
+      "nucleus": 1,
+      "exact_greedy_transcript": true,
+      "default_matching_nuclei_raw": [],
+      "raw_assessable": true,
+      "original_gated_screen": false,
+      "threshold_grid": [
+        {
+          "transition": 1.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": []
+        }
+      ],
+      "boundary_sensitivity": [
+        {
+          "radius_seconds": 0.02,
+          "valid_grid_counts": {
+            "False": 81
+          }
+        },
+        {
+          "radius_seconds": 0.04,
+          "valid_grid_counts": {
+            "False": 81
+          }
+        },
+        {
+          "radius_seconds": 0.08,
+          "valid_grid_counts": {
+            "False": 72
+          }
+        }
+      ],
+      "accent_verified": false
+    },
+    {
+      "run": "generalisation",
+      "id": "hashi-c0-s1-caption-n2-r0",
+      "word": "hashi",
+      "method": "caption",
+      "nucleus": 2,
+      "exact_greedy_transcript": false,
+      "default_matching_nuclei_raw": [],
+      "raw_assessable": true,
+      "original_gated_screen": false,
+      "threshold_grid": [
+        {
+          "transition": 1.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": []
+        }
+      ],
+      "boundary_sensitivity": [
+        {
+          "radius_seconds": 0.02,
+          "valid_grid_counts": {
+            "False": 81
+          }
+        },
+        {
+          "radius_seconds": 0.04,
+          "valid_grid_counts": {
+            "False": 78,
+            "True": 3
+          }
+        },
+        {
+          "radius_seconds": 0.08,
+          "valid_grid_counts": {
+            "False": 63,
+            "True": 9
+          }
+        }
+      ],
+      "accent_verified": false
+    },
+    {
+      "run": "generalisation",
+      "id": "kokoro-c0-s1-original-nna-r0",
+      "word": "kokoro",
+      "method": "original",
+      "nucleus": null,
+      "exact_greedy_transcript": false,
+      "default_matching_nuclei_raw": [
+        3
+      ],
+      "raw_assessable": true,
+      "original_gated_screen": null,
+      "threshold_grid": [
+        {
+          "transition": 1.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": [
+            3
+          ]
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": [
+            3
+          ]
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": [
+            0,
+            3
+          ]
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": [
+            3
+          ]
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": [
+            3
+          ]
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": [
+            0,
+            3
+          ]
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": [
+            3
+          ]
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": [
+            3
+          ]
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": [
+            0,
+            3
+          ]
+        }
+      ],
+      "boundary_sensitivity": [],
+      "accent_verified": false
+    },
+    {
+      "run": "generalisation",
+      "id": "kokoro-c0-s1-reading-nna-r0",
+      "word": "kokoro",
+      "method": "reading",
+      "nucleus": null,
+      "exact_greedy_transcript": false,
+      "default_matching_nuclei_raw": [
+        3
+      ],
+      "raw_assessable": true,
+      "original_gated_screen": null,
+      "threshold_grid": [
+        {
+          "transition": 1.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": [
+            3
+          ]
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": [
+            3
+          ]
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": [
+            3
+          ]
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": [
+            3
+          ]
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": [
+            3
+          ]
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": [
+            3
+          ]
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": [
+            3
+          ]
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": [
+            3
+          ]
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": [
+            3
+          ]
+        }
+      ],
+      "boundary_sensitivity": [],
+      "accent_verified": false
+    },
+    {
+      "run": "generalisation",
+      "id": "kokoro-c0-s1-downstep-n0-r0",
+      "word": "kokoro",
+      "method": "downstep",
+      "nucleus": 0,
+      "exact_greedy_transcript": false,
+      "default_matching_nuclei_raw": [
+        3
+      ],
+      "raw_assessable": true,
+      "original_gated_screen": false,
+      "threshold_grid": [
+        {
+          "transition": 1.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": [
+            3
+          ]
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": [
+            3
+          ]
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": [
+            3
+          ]
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": [
+            3
+          ]
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": [
+            3
+          ]
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": [
+            3
+          ]
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": [
+            3
+          ]
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": [
+            3
+          ]
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": [
+            3
+          ]
+        }
+      ],
+      "boundary_sensitivity": [
+        {
+          "radius_seconds": 0.02,
+          "valid_grid_counts": {
+            "False": 243
+          }
+        },
+        {
+          "radius_seconds": 0.04,
+          "valid_grid_counts": {
+            "False": 162
+          }
+        },
+        {
+          "radius_seconds": 0.08,
+          "valid_grid_counts": {
+            "False": 135,
+            "None": 27
+          }
+        }
+      ],
+      "accent_verified": false
+    },
+    {
+      "run": "generalisation",
+      "id": "kokoro-c0-s1-downstep-n1-r0",
+      "word": "kokoro",
+      "method": "downstep",
+      "nucleus": 1,
+      "exact_greedy_transcript": true,
+      "default_matching_nuclei_raw": [],
+      "raw_assessable": true,
+      "original_gated_screen": false,
+      "threshold_grid": [
+        {
+          "transition": 1.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": []
+        }
+      ],
+      "boundary_sensitivity": [
+        {
+          "radius_seconds": 0.02,
+          "valid_grid_counts": {
+            "False": 243
+          }
+        },
+        {
+          "radius_seconds": 0.04,
+          "valid_grid_counts": {
+            "False": 162
+          }
+        },
+        {
+          "radius_seconds": 0.08,
+          "valid_grid_counts": {
+            "False": 144
+          }
+        }
+      ],
+      "accent_verified": false
+    },
+    {
+      "run": "generalisation",
+      "id": "kokoro-c0-s1-downstep-n2-r0",
+      "word": "kokoro",
+      "method": "downstep",
+      "nucleus": 2,
+      "exact_greedy_transcript": false,
+      "default_matching_nuclei_raw": [],
+      "raw_assessable": true,
+      "original_gated_screen": null,
+      "threshold_grid": [
+        {
+          "transition": 1.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": [
+            1
+          ]
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": [
+            1
+          ]
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": []
+        }
+      ],
+      "boundary_sensitivity": [
+        {
+          "radius_seconds": 0.02,
+          "valid_grid_counts": {
+            "False": 243
+          }
+        },
+        {
+          "radius_seconds": 0.04,
+          "valid_grid_counts": {
+            "False": 162
+          }
+        },
+        {
+          "radius_seconds": 0.08,
+          "valid_grid_counts": {
+            "False": 135,
+            "None": 27
+          }
+        }
+      ],
+      "accent_verified": false
+    },
+    {
+      "run": "generalisation",
+      "id": "kokoro-c0-s1-downstep-n3-r0",
+      "word": "kokoro",
+      "method": "downstep",
+      "nucleus": 3,
+      "exact_greedy_transcript": false,
+      "default_matching_nuclei_raw": [],
+      "raw_assessable": true,
+      "original_gated_screen": null,
+      "threshold_grid": [
+        {
+          "transition": 1.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": []
+        }
+      ],
+      "boundary_sensitivity": [
+        {
+          "radius_seconds": 0.02,
+          "valid_grid_counts": {
+            "False": 243
+          }
+        },
+        {
+          "radius_seconds": 0.04,
+          "valid_grid_counts": {
+            "False": 162
+          }
+        },
+        {
+          "radius_seconds": 0.08,
+          "valid_grid_counts": {
+            "False": 144,
+            "True": 18
+          }
+        }
+      ],
+      "accent_verified": false
+    },
+    {
+      "run": "generalisation",
+      "id": "kokoro-c0-s1-caption-n0-r0",
+      "word": "kokoro",
+      "method": "caption",
+      "nucleus": 0,
+      "exact_greedy_transcript": false,
+      "default_matching_nuclei_raw": [],
+      "raw_assessable": true,
+      "original_gated_screen": null,
+      "threshold_grid": [
+        {
+          "transition": 1.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": []
+        }
+      ],
+      "boundary_sensitivity": [
+        {
+          "radius_seconds": 0.02,
+          "valid_grid_counts": {
+            "False": 243
+          }
+        },
+        {
+          "radius_seconds": 0.04,
+          "valid_grid_counts": {
+            "False": 162
+          }
+        },
+        {
+          "radius_seconds": 0.08,
+          "valid_grid_counts": {
+            "False": 135
+          }
+        }
+      ],
+      "accent_verified": false
+    },
+    {
+      "run": "generalisation",
+      "id": "kokoro-c0-s1-caption-n1-r0",
+      "word": "kokoro",
+      "method": "caption",
+      "nucleus": 1,
+      "exact_greedy_transcript": false,
+      "default_matching_nuclei_raw": [],
+      "raw_assessable": true,
+      "original_gated_screen": null,
+      "threshold_grid": [
+        {
+          "transition": 1.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": []
+        }
+      ],
+      "boundary_sensitivity": [
+        {
+          "radius_seconds": 0.02,
+          "valid_grid_counts": {
+            "False": 243
+          }
+        },
+        {
+          "radius_seconds": 0.04,
+          "valid_grid_counts": {
+            "False": 243
+          }
+        },
+        {
+          "radius_seconds": 0.08,
+          "valid_grid_counts": {
+            "False": 216
+          }
+        }
+      ],
+      "accent_verified": false
+    },
+    {
+      "run": "generalisation",
+      "id": "kokoro-c0-s1-caption-n2-r0",
+      "word": "kokoro",
+      "method": "caption",
+      "nucleus": 2,
+      "exact_greedy_transcript": false,
+      "default_matching_nuclei_raw": [],
+      "raw_assessable": true,
+      "original_gated_screen": null,
+      "threshold_grid": [
+        {
+          "transition": 1.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": []
+        }
+      ],
+      "boundary_sensitivity": [
+        {
+          "radius_seconds": 0.02,
+          "valid_grid_counts": {
+            "False": 243
+          }
+        },
+        {
+          "radius_seconds": 0.04,
+          "valid_grid_counts": {
+            "False": 243
+          }
+        },
+        {
+          "radius_seconds": 0.08,
+          "valid_grid_counts": {
+            "False": 189,
+            "None": 27
+          }
+        }
+      ],
+      "accent_verified": false
+    },
+    {
+      "run": "generalisation",
+      "id": "kokoro-c0-s1-caption-n3-r0",
+      "word": "kokoro",
+      "method": "caption",
+      "nucleus": 3,
+      "exact_greedy_transcript": false,
+      "default_matching_nuclei_raw": [],
+      "raw_assessable": true,
+      "original_gated_screen": null,
+      "threshold_grid": [
+        {
+          "transition": 1.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": []
+        }
+      ],
+      "boundary_sensitivity": [
+        {
+          "radius_seconds": 0.02,
+          "valid_grid_counts": {
+            "False": 243
+          }
+        },
+        {
+          "radius_seconds": 0.04,
+          "valid_grid_counts": {
+            "False": 243
+          }
+        },
+        {
+          "radius_seconds": 0.08,
+          "valid_grid_counts": {
+            "True": 21,
+            "False": 222
+          }
+        }
+      ],
+      "accent_verified": false
+    },
+    {
+      "run": "pilot",
+      "id": "ame-c0-s0-original-nna-r0",
+      "word": "ame",
+      "method": "original",
+      "nucleus": null,
+      "exact_greedy_transcript": true,
+      "default_matching_nuclei_raw": [
+        2
+      ],
+      "raw_assessable": true,
+      "original_gated_screen": null,
+      "threshold_grid": [
+        {
+          "transition": 1.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        }
+      ],
+      "boundary_sensitivity": [],
+      "accent_verified": false
+    },
+    {
+      "run": "pilot",
+      "id": "ame-c0-s0-reading-nna-r0",
+      "word": "ame",
+      "method": "reading",
+      "nucleus": null,
+      "exact_greedy_transcript": true,
+      "default_matching_nuclei_raw": [
+        0
+      ],
+      "raw_assessable": true,
+      "original_gated_screen": null,
+      "threshold_grid": [
+        {
+          "transition": 1.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": [
+            0
+          ]
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": [
+            0
+          ]
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": [
+            0
+          ]
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": [
+            0
+          ]
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": [
+            0
+          ]
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": [
+            0
+          ]
+        }
+      ],
+      "boundary_sensitivity": [],
+      "accent_verified": false
+    },
+    {
+      "run": "pilot",
+      "id": "ame-c0-s0-downstep-n0-r0",
+      "word": "ame",
+      "method": "downstep",
+      "nucleus": 0,
+      "exact_greedy_transcript": true,
+      "default_matching_nuclei_raw": [
+        0
+      ],
+      "raw_assessable": true,
+      "original_gated_screen": null,
+      "threshold_grid": [
+        {
+          "transition": 1.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": [
+            0
+          ]
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": [
+            0
+          ]
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": [
+            0
+          ]
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": [
+            0
+          ]
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": [
+            0
+          ]
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": [
+            0
+          ]
+        }
+      ],
+      "boundary_sensitivity": [
+        {
+          "radius_seconds": 0.02,
+          "valid_grid_counts": {
+            "False": 27,
+            "True": 54
+          }
+        },
+        {
+          "radius_seconds": 0.04,
+          "valid_grid_counts": {
+            "False": 21,
+            "True": 51,
+            "None": 9
+          }
+        },
+        {
+          "radius_seconds": 0.08,
+          "valid_grid_counts": {
+            "False": 12,
+            "True": 42,
+            "None": 18
+          }
+        }
+      ],
+      "accent_verified": false
+    },
+    {
+      "run": "pilot",
+      "id": "ame-c0-s0-downstep-n1-r0",
+      "word": "ame",
+      "method": "downstep",
+      "nucleus": 1,
+      "exact_greedy_transcript": false,
+      "default_matching_nuclei_raw": [
+        2
+      ],
+      "raw_assessable": true,
+      "original_gated_screen": null,
+      "threshold_grid": [
+        {
+          "transition": 1.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        }
+      ],
+      "boundary_sensitivity": [
+        {
+          "radius_seconds": 0.02,
+          "valid_grid_counts": {
+            "False": 81
+          }
+        },
+        {
+          "radius_seconds": 0.04,
+          "valid_grid_counts": {
+            "False": 81
+          }
+        },
+        {
+          "radius_seconds": 0.08,
+          "valid_grid_counts": {
+            "False": 81
+          }
+        }
+      ],
+      "accent_verified": false
+    },
+    {
+      "run": "pilot",
+      "id": "ame-c0-s0-arrows-n0-r0",
+      "word": "ame",
+      "method": "arrows",
+      "nucleus": 0,
+      "exact_greedy_transcript": false,
+      "default_matching_nuclei_raw": [
+        0,
+        2
+      ],
+      "raw_assessable": true,
+      "original_gated_screen": true,
+      "threshold_grid": [
+        {
+          "transition": 1.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": [
+            0,
+            2
+          ]
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": [
+            0,
+            2
+          ]
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": [
+            0,
+            2
+          ]
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": [
+            0,
+            2
+          ]
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": [
+            0,
+            2
+          ]
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": [
+            0,
+            2
+          ]
+        }
+      ],
+      "boundary_sensitivity": [
+        {
+          "radius_seconds": 0.02,
+          "valid_grid_counts": {
+            "True": 81
+          }
+        },
+        {
+          "radius_seconds": 0.04,
+          "valid_grid_counts": {
+            "True": 81
+          }
+        },
+        {
+          "radius_seconds": 0.08,
+          "valid_grid_counts": {
+            "True": 81
+          }
+        }
+      ],
+      "accent_verified": false
+    },
+    {
+      "run": "pilot",
+      "id": "ame-c0-s0-arrows-n1-r0",
+      "word": "ame",
+      "method": "arrows",
+      "nucleus": 1,
+      "exact_greedy_transcript": false,
+      "default_matching_nuclei_raw": [],
+      "raw_assessable": true,
+      "original_gated_screen": null,
+      "threshold_grid": [
+        {
+          "transition": 1.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": []
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": []
+        }
+      ],
+      "boundary_sensitivity": [
+        {
+          "radius_seconds": 0.02,
+          "valid_grid_counts": {
+            "False": 81
+          }
+        },
+        {
+          "radius_seconds": 0.04,
+          "valid_grid_counts": {
+            "False": 81
+          }
+        },
+        {
+          "radius_seconds": 0.08,
+          "valid_grid_counts": {
+            "False": 54
+          }
+        }
+      ],
+      "accent_verified": false
+    },
+    {
+      "run": "pilot",
+      "id": "ame-c0-s0-caption-n0-r0",
+      "word": "ame",
+      "method": "caption",
+      "nucleus": 0,
+      "exact_greedy_transcript": true,
+      "default_matching_nuclei_raw": [
+        2
+      ],
+      "raw_assessable": true,
+      "original_gated_screen": false,
+      "threshold_grid": [
+        {
+          "transition": 1.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        }
+      ],
+      "boundary_sensitivity": [
+        {
+          "radius_seconds": 0.02,
+          "valid_grid_counts": {
+            "False": 81
+          }
+        },
+        {
+          "radius_seconds": 0.04,
+          "valid_grid_counts": {
+            "False": 81
+          }
+        },
+        {
+          "radius_seconds": 0.08,
+          "valid_grid_counts": {
+            "False": 72
+          }
+        }
+      ],
+      "accent_verified": false
+    },
+    {
+      "run": "pilot",
+      "id": "ame-c0-s0-caption-n1-r0",
+      "word": "ame",
+      "method": "caption",
+      "nucleus": 1,
+      "exact_greedy_transcript": false,
+      "default_matching_nuclei_raw": [
+        2
+      ],
+      "raw_assessable": true,
+      "original_gated_screen": null,
+      "threshold_grid": [
+        {
+          "transition": 1.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 1.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 1.5,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 2.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 3.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        },
+        {
+          "transition": 2.0,
+          "tolerance": 4.0,
+          "matching_nuclei_raw": [
+            2
+          ]
+        }
+      ],
+      "boundary_sensitivity": [
+        {
+          "radius_seconds": 0.02,
+          "valid_grid_counts": {
+            "False": 81
+          }
+        },
+        {
+          "radius_seconds": 0.04,
+          "valid_grid_counts": {
+            "False": 81
+          }
+        },
+        {
+          "radius_seconds": 0.08,
+          "valid_grid_counts": {
+            "False": 72
+          }
+        }
+      ],
+      "accent_verified": false
+    }
+  ],
+  "matched_control_comparisons": [
+    {
+      "run": "boundaries",
+      "id": "ame-c1-s0-katakana-n0-r0",
+      "nucleus": 0,
+      "reading_control": "ame-c1-s0-reading-nna-r0",
+      "intervention_raw_match": false,
+      "control_raw_match": false,
+      "intervention_assessable": true,
+      "control_assessable": true
+    },
+    {
+      "run": "boundaries",
+      "id": "ame-c1-s0-katakana-n1-r0",
+      "nucleus": 1,
+      "reading_control": "ame-c1-s0-reading-nna-r0",
+      "intervention_raw_match": false,
+      "control_raw_match": false,
+      "intervention_assessable": true,
+      "control_assessable": true
+    },
+    {
+      "run": "boundaries",
+      "id": "ame-c1-s0-space-n0-r0",
+      "nucleus": 0,
+      "reading_control": "ame-c1-s0-reading-nna-r0",
+      "intervention_raw_match": false,
+      "control_raw_match": false,
+      "intervention_assessable": true,
+      "control_assessable": true
+    },
+    {
+      "run": "boundaries",
+      "id": "ame-c1-s0-space-n1-r0",
+      "nucleus": 1,
+      "reading_control": "ame-c1-s0-reading-nna-r0",
+      "intervention_raw_match": false,
+      "control_raw_match": false,
+      "intervention_assessable": true,
+      "control_assessable": true
+    },
+    {
+      "run": "boundaries",
+      "id": "ame-c1-s0-comma-n0-r0",
+      "nucleus": 0,
+      "reading_control": "ame-c1-s0-reading-nna-r0",
+      "intervention_raw_match": false,
+      "control_raw_match": false,
+      "intervention_assessable": true,
+      "control_assessable": true
+    },
+    {
+      "run": "boundaries",
+      "id": "ame-c1-s0-comma-n1-r0",
+      "nucleus": 1,
+      "reading_control": "ame-c1-s0-reading-nna-r0",
+      "intervention_raw_match": false,
+      "control_raw_match": false,
+      "intervention_assessable": true,
+      "control_assessable": true
+    },
+    {
+      "run": "generalisation",
+      "id": "ame-c0-s1-downstep-n0-r0",
+      "nucleus": 0,
+      "reading_control": "ame-c0-s1-reading-nna-r0",
+      "intervention_raw_match": false,
+      "control_raw_match": false,
+      "intervention_assessable": true,
+      "control_assessable": true
+    },
+    {
+      "run": "generalisation",
+      "id": "ame-c0-s1-downstep-n1-r0",
+      "nucleus": 1,
+      "reading_control": "ame-c0-s1-reading-nna-r0",
+      "intervention_raw_match": false,
+      "control_raw_match": false,
+      "intervention_assessable": true,
+      "control_assessable": true
+    },
+    {
+      "run": "generalisation",
+      "id": "ame-c0-s1-caption-n0-r0",
+      "nucleus": 0,
+      "reading_control": "ame-c0-s1-reading-nna-r0",
+      "intervention_raw_match": true,
+      "control_raw_match": false,
+      "intervention_assessable": true,
+      "control_assessable": true
+    },
+    {
+      "run": "generalisation",
+      "id": "ame-c0-s1-caption-n1-r0",
+      "nucleus": 1,
+      "reading_control": "ame-c0-s1-reading-nna-r0",
+      "intervention_raw_match": false,
+      "control_raw_match": false,
+      "intervention_assessable": true,
+      "control_assessable": true
+    },
+    {
+      "run": "generalisation",
+      "id": "hashi-c0-s1-downstep-n0-r0",
+      "nucleus": 0,
+      "reading_control": "hashi-c0-s1-reading-nna-r0",
+      "intervention_raw_match": false,
+      "control_raw_match": false,
+      "intervention_assessable": true,
+      "control_assessable": true
+    },
+    {
+      "run": "generalisation",
+      "id": "hashi-c0-s1-downstep-n1-r0",
+      "nucleus": 1,
+      "reading_control": "hashi-c0-s1-reading-nna-r0",
+      "intervention_raw_match": false,
+      "control_raw_match": false,
+      "intervention_assessable": true,
+      "control_assessable": true
+    },
+    {
+      "run": "generalisation",
+      "id": "hashi-c0-s1-downstep-n2-r0",
+      "nucleus": 2,
+      "reading_control": "hashi-c0-s1-reading-nna-r0",
+      "intervention_raw_match": true,
+      "control_raw_match": false,
+      "intervention_assessable": true,
+      "control_assessable": true
+    },
+    {
+      "run": "generalisation",
+      "id": "hashi-c0-s1-caption-n0-r0",
+      "nucleus": 0,
+      "reading_control": "hashi-c0-s1-reading-nna-r0",
+      "intervention_raw_match": false,
+      "control_raw_match": false,
+      "intervention_assessable": true,
+      "control_assessable": true
+    },
+    {
+      "run": "generalisation",
+      "id": "hashi-c0-s1-caption-n1-r0",
+      "nucleus": 1,
+      "reading_control": "hashi-c0-s1-reading-nna-r0",
+      "intervention_raw_match": false,
+      "control_raw_match": false,
+      "intervention_assessable": true,
+      "control_assessable": true
+    },
+    {
+      "run": "generalisation",
+      "id": "hashi-c0-s1-caption-n2-r0",
+      "nucleus": 2,
+      "reading_control": "hashi-c0-s1-reading-nna-r0",
+      "intervention_raw_match": false,
+      "control_raw_match": false,
+      "intervention_assessable": true,
+      "control_assessable": true
+    },
+    {
+      "run": "generalisation",
+      "id": "kokoro-c0-s1-downstep-n0-r0",
+      "nucleus": 0,
+      "reading_control": "kokoro-c0-s1-reading-nna-r0",
+      "intervention_raw_match": false,
+      "control_raw_match": false,
+      "intervention_assessable": true,
+      "control_assessable": true
+    },
+    {
+      "run": "generalisation",
+      "id": "kokoro-c0-s1-downstep-n1-r0",
+      "nucleus": 1,
+      "reading_control": "kokoro-c0-s1-reading-nna-r0",
+      "intervention_raw_match": false,
+      "control_raw_match": false,
+      "intervention_assessable": true,
+      "control_assessable": true
+    },
+    {
+      "run": "generalisation",
+      "id": "kokoro-c0-s1-downstep-n2-r0",
+      "nucleus": 2,
+      "reading_control": "kokoro-c0-s1-reading-nna-r0",
+      "intervention_raw_match": false,
+      "control_raw_match": false,
+      "intervention_assessable": true,
+      "control_assessable": true
+    },
+    {
+      "run": "generalisation",
+      "id": "kokoro-c0-s1-downstep-n3-r0",
+      "nucleus": 3,
+      "reading_control": "kokoro-c0-s1-reading-nna-r0",
+      "intervention_raw_match": false,
+      "control_raw_match": true,
+      "intervention_assessable": true,
+      "control_assessable": true
+    },
+    {
+      "run": "generalisation",
+      "id": "kokoro-c0-s1-caption-n0-r0",
+      "nucleus": 0,
+      "reading_control": "kokoro-c0-s1-reading-nna-r0",
+      "intervention_raw_match": false,
+      "control_raw_match": false,
+      "intervention_assessable": true,
+      "control_assessable": true
+    },
+    {
+      "run": "generalisation",
+      "id": "kokoro-c0-s1-caption-n1-r0",
+      "nucleus": 1,
+      "reading_control": "kokoro-c0-s1-reading-nna-r0",
+      "intervention_raw_match": false,
+      "control_raw_match": false,
+      "intervention_assessable": true,
+      "control_assessable": true
+    },
+    {
+      "run": "generalisation",
+      "id": "kokoro-c0-s1-caption-n2-r0",
+      "nucleus": 2,
+      "reading_control": "kokoro-c0-s1-reading-nna-r0",
+      "intervention_raw_match": false,
+      "control_raw_match": false,
+      "intervention_assessable": true,
+      "control_assessable": true
+    },
+    {
+      "run": "generalisation",
+      "id": "kokoro-c0-s1-caption-n3-r0",
+      "nucleus": 3,
+      "reading_control": "kokoro-c0-s1-reading-nna-r0",
+      "intervention_raw_match": false,
+      "control_raw_match": true,
+      "intervention_assessable": true,
+      "control_assessable": true
+    },
+    {
+      "run": "pilot",
+      "id": "ame-c0-s0-downstep-n0-r0",
+      "nucleus": 0,
+      "reading_control": "ame-c0-s0-reading-nna-r0",
+      "intervention_raw_match": true,
+      "control_raw_match": true,
+      "intervention_assessable": true,
+      "control_assessable": true
+    },
+    {
+      "run": "pilot",
+      "id": "ame-c0-s0-downstep-n1-r0",
+      "nucleus": 1,
+      "reading_control": "ame-c0-s0-reading-nna-r0",
+      "intervention_raw_match": false,
+      "control_raw_match": false,
+      "intervention_assessable": true,
+      "control_assessable": true
+    },
+    {
+      "run": "pilot",
+      "id": "ame-c0-s0-arrows-n0-r0",
+      "nucleus": 0,
+      "reading_control": "ame-c0-s0-reading-nna-r0",
+      "intervention_raw_match": true,
+      "control_raw_match": true,
+      "intervention_assessable": true,
+      "control_assessable": true
+    },
+    {
+      "run": "pilot",
+      "id": "ame-c0-s0-arrows-n1-r0",
+      "nucleus": 1,
+      "reading_control": "ame-c0-s0-reading-nna-r0",
+      "intervention_raw_match": false,
+      "control_raw_match": false,
+      "intervention_assessable": true,
+      "control_assessable": true
+    },
+    {
+      "run": "pilot",
+      "id": "ame-c0-s0-caption-n0-r0",
+      "nucleus": 0,
+      "reading_control": "ame-c0-s0-reading-nna-r0",
+      "intervention_raw_match": false,
+      "control_raw_match": true,
+      "intervention_assessable": true,
+      "control_assessable": true
+    },
+    {
+      "run": "pilot",
+      "id": "ame-c0-s0-caption-n1-r0",
+      "nucleus": 1,
+      "reading_control": "ame-c0-s0-reading-nna-r0",
+      "intervention_raw_match": false,
+      "control_raw_match": false,
+      "intervention_assessable": true,
+      "control_assessable": true
+    }
+  ],
+  "summary": {
+    "clips": 40,
+    "intended_nucleus_clips": 30,
+    "raw_intervention_matches": 4,
+    "raw_reading_control_matches": 5,
+    "raw_intervention_only": 2,
+    "raw_control_only": 3,
+    "clips_matching_multiple_nuclei_raw": 2
+  },
+  "code_sha256": {
+    "robustness.py": "b110610a38e70e7f5bf3facf2472ba89e15b5d057a7eb24be1042ce525d12cf9",
+    "analyse.py": "b6f90803150e12400bff070e6cd20a288916d0fcad3c469d5fce1abdc00e0d10",
+    "probes.py": "deeb358b280f65f92def91dbd46fee84979e9a99f4052eaaa129ad40e4592281"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "entries": [
+    {"surface": "雨", "reading": "あめ", "accent": {"dialect": "tokyo", "nucleus": 1}},
+    {"surface": "飴", "reading": "あめ", "accent": {"dialect": "tokyo", "nucleus": 0}}
+  ]
+}

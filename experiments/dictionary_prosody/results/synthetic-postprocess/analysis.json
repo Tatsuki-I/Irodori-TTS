@@ -1,0 +1,19 @@
+{
+  "scope": "synthetic harmonic signal only; no phonemes or lexical accent",
+  "input_f0_hz": 180,
+  "extractor": "harvest",
+  "requested_peak_shift_semitones": -4,
+  "measured_centre_shift_semitones": -3.888778845723021,
+  "unvoiced_parameter_frames_unchanged": true,
+  "metrics": {
+    "roundtrip": {
+      "centre_f0_hz": 179.9745503392025,
+      "frames": 13
+    },
+    "shifted": {
+      "centre_f0_hz": 143.76654655103283,
+      "frames": 13
+    }
+  },
+  "accent_verified": false
+}
